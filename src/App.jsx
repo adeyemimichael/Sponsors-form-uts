@@ -1,11 +1,13 @@
 'use client';
 
-import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
+import { Button,  Label, TextInput } from 'flowbite-react';
 
 export default function ShadowInputs() {
   return (
-    <div className='w-screen h-screen flex flex-col justify-center items-center bg-black'>
-    <form className="flex max-w-md flex-col gap-4 bg-slate-700 p-10 md:w-[50%]  w-[100%] md:h-[80%]">
+    <div className='w-screen h-screen flex flex-col justify-center items-center bg-[#000038]'>
+      <h1 className='font-bold text-[30px] text-white'>Want to Sponsor Unilorin tech Summit? </h1>
+      <p className='text-gray-100 font-normal text-[18px]'>Fill the form below and one of our representative will reach out to in the next 24 hours </p>
+    <form className="flex max-w-md flex-col gap-4 bg-[#b5fc1d] p-10 md:w-[50%]  w-[100%] md:h-[80%]">
       <div>
         <div className="mb-2 block">
           <Label
@@ -15,7 +17,7 @@ export default function ShadowInputs() {
         </div>
         <TextInput
           id="email2"
-          placeholder="name@flowbite.com"
+          placeholder="name@mail.com"
           required
           shadow
           type="email"
@@ -24,43 +26,51 @@ export default function ShadowInputs() {
       <div>
         <div className="mb-2 block">
           <Label
-            htmlFor="password2"
-            value="Your password"
+            htmlFor="fullname "
+            value="Full name "
           />
         </div>
         <TextInput
-          id="password2"
+          id="name "
           required
           shadow
-          type="password"
+          type="text"
         />
       </div>
       <div>
         <div className="mb-2 block">
           <Label
-            htmlFor="repeat-password"
-            value="Repeat password"
+            htmlFor="organisation name "
+            value="Organization"
           />
         </div>
         <TextInput
-          id="repeat-password"
+          id="organization name "
           required
           shadow
-          type="password"
+          type="text"
         />
       </div>
       <div className="flex items-center gap-2">
-        <Checkbox id="agree" />
+       <div className='mb-2 block'>
         <Label
           className="flex"
-          htmlFor="agree"
+          htmlFor="phone no"
+          value='Phone number'
         >
-          
-         
         </Label>
+        <TextInput
+          id="phone number  "
+          required
+          shadow
+          type="number"
+         
+         className='w-[100%]'
+        />
+        </div>
       </div>
       <Button type="submit">
-        Register new account
+      Become a Sponsor 
       </Button>
     </form>
     </div>
