@@ -33,9 +33,10 @@ export default function ShadowInputs() {
     }
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center bg-[#000038]'>
-      <h1 className='font-bold text-[30px] text-white'>Want to Sponsor Unilorin tech Summit? </h1>
-      <p className='text-gray-100 font-normal text-[18px]'>Fill the form below and one of our representative will reach out to in the next 24 hours </p>
-    <form className="flex max-w-md flex-col gap-4 bg-[#b5fc1d] p-10 md:w-[50%]  w-[100%] md:h-[80%]" onSubmit={handleSubmit}>
+      
+    <form className="flex  flex-col gap-4 bg-gray-100 p-6 md:h-screen  rounded-lg mb-6 mt-6 scroll-smooth hover:scroll-auto" onSubmit={handleSubmit}>
+    <h1 className='md:font-normal font-semibold  md:text-[35px] text-[30px] text-black text-center  tracking-tight leading-relaxed'>Want to Sponsor Unilorin Tech Summit? </h1>
+      <p className='text-gray-900 font-normal text-[16px] md:text-[16px] tracking-tight text-center line-clamp-2 pb-4 mx-4 md:mx-6 leading-5'>Fill the form below and one of our representatives will reach out to you in the next 24 hours </p>
       <div>
         <div className="mb-2 block">
           <Label
@@ -46,12 +47,12 @@ export default function ShadowInputs() {
         <TextInput
           id="email2"
           placeholder="name@mail.com"
-          // required
+          required
           shadow
           onChange={(e) => SetEmail(e.target.value)}
           value={email}
           type="email"
-       
+       className='border-2 border-stone-950 rounded-xl'
         />
       </div>
       <div>
@@ -63,12 +64,13 @@ export default function ShadowInputs() {
         </div>
         <TextInput
           id="name"
-          // required
+          placeholder="Andrew John"
+        required
           shadow
           onChange={(e) => SetUsername(e.target.value)}
           value={Fullname }
           type="text"
-        
+          className='border-2 border-stone-950 rounded-xl'
         />
       </div>
       <div>
@@ -80,15 +82,16 @@ export default function ShadowInputs() {
         </div>
         <TextInput
           id="organization name "
-          // required
+          placeholder='ABC.co'
+          required
           shadow
           onChange={(e) => SetOrganization(e.target.value)}
           value={organization}
           type="text"
-       
+          className='border-2 border-stone-950 rounded-xl'
         />
       </div>
-      <div className="flex items-center gap-2">
+      <div className="gap-2">
        <div className='mb-2 block'>
         <Label
           className="flex"
@@ -96,19 +99,19 @@ export default function ShadowInputs() {
           value='Phone number'
         >
         </Label>
+        </div>
         <TextInput
-          id="phone number  "
-          // required
+          id="phone number "
+          placeholder='0810000000'
+          required
           shadow
-          type="number "
+          type="number"
           onChange={(e) => SetPhonenumber(e.target.value)}
             value={Phonenumber}
-          
-         className='w-[100%]'
+            className='border-2 border-stone-950 rounded-xl'
         />
-        </div>
       </div>
-      <Button type="submit">
+      <Button type="submit" className='bg-[#000038] text-center' >
       Become a Sponsor 
       </Button>
     </form>
@@ -117,3 +120,4 @@ export default function ShadowInputs() {
 }
 
 
+// https://prod.liveshare.vsengsaas.visualstudio.com/join?9F337BB93F4D127E9483CA16C929D0AD5885
