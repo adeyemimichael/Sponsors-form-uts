@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button,  Label, TextInput } from 'flowbite-react';
 import axios from "axios";
+import Success from './Success';
 export default function ShadowInputs() {
 
 
@@ -9,7 +10,7 @@ export default function ShadowInputs() {
   const [Fullname , SetUsername] = useState(" ");
   const [organization, SetOrganization] = useState(" ");
   const [Phonenumber, SetPhonenumber] = useState(" ");
-
+  const [showSuccess, setShowSuccess] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(username, email);
@@ -30,6 +31,11 @@ export default function ShadowInputs() {
         SetOrganization("");
         SetPhonenumber("");
       });
+      setShowSuccess(true);
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 2000); // 2 seconds in milliseconds
+      
     }
   return (
     <div className='w-screen h-screen flex flex-col justify-center items-center bg-[#000038]'>
@@ -115,6 +121,7 @@ export default function ShadowInputs() {
       Become a Sponsor 
       </Button>
     </form>
+    {showSuccess && <Success/>}
     </div>
   )
 }
